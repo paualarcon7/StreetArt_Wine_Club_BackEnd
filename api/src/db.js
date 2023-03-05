@@ -6,17 +6,19 @@ const {
   DB_DEPLOY,
   DB_USER, DB_PASSWORD, DB_HOST,
 } = process.env;
-//postgresql://postgres:qwerty@localhost:5432/products
-// const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/products`, {
-//   logging: false, // set to console.log to see the raw SQL queries
-//   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-// });
+
+
+
+const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/products`, {
+logging: false, // set to console.log to see the raw SQL queries
+native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+});
 
 // ------------------------Para deployar -------
-const sequelize = new Sequelize(DB_DEPLOY, {
+/* const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false,
   native: false,
-});
+}); */
 // --------------------------------------------------------
 
 const basename = path.basename(__filename);
