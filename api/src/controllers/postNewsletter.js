@@ -34,7 +34,7 @@ const createNewsletter = async function (email) {
     
       await newMailNewsletter.setUser(users)
       
-      await emailNewsletter(email)
+     // await emailNewsletter(email)
     
     } else {
       const updateStatus = await Newsletter.update({
@@ -50,7 +50,7 @@ const createNewsletter = async function (email) {
         }
       })
       
-      await emailNewsletter(email)
+    //  await emailNewsletter(email)
     }
 
     } else if (!users) {
@@ -79,7 +79,7 @@ const createNewsletter = async function (email) {
             }
           });
     
-          await emailNewsletter(email);
+      //    await emailNewsletter(email);
 
     } else {
       const updateStatus = await Newsletter.update({
@@ -95,7 +95,7 @@ const createNewsletter = async function (email) {
         }
       });
 
-      await emailNewsletter(email);
+    //  await emailNewsletter(email);
     }
 
         return `${email} was added succesfully to newsletter  `
